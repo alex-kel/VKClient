@@ -1,0 +1,16 @@
+{
+  "name": "VK_Client",
+  "version": "0.0.1",
+  "main": "pages/index.html",
+  "author": "Alexander Kel",
+  "window": {
+    "width": 700,
+    "height": 750,
+    "position": "center",
+    "toolbar": false
+  },
+  "devDependencies":{
+    "gulp": "*",
+    "gulp-browserify": "*"
+  }
+}
