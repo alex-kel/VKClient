@@ -9,7 +9,25 @@
     "position": "center",
     "toolbar": true
   },
+  "scripts":{
+    "build": "gulp build",
+    "dev": "nw .",
+    "start": "npm run build && npm run dev"
+  },
   "dependencies": {
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "classnames": "*"
+  },
+  "devDependencies": {
+    "glob":"*",
+    "gulp-rename": "*",
+    "gulp": "*",
+    "vinyl-source-stream": "*",
+    "gulp-browserify": "*",
+    "gulp-notify": "^2.2.0",
+    "reactify": "*",
+    "gulp-streamify": "*",
+    "gulp-sass": "*",
+    "gulp-flatten": "*"
   }
 }
