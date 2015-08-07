@@ -6,7 +6,7 @@ var classnames = require('classnames');
 var MenuItem = React.createClass({
     render: function(){
         var item = this.props.item;
-        var classes = classnames('menu-item', item.className);
+        var classes = classnames('left-menu-item', item.className);
         return (
             <div className={classes}>
                 {item.displayName}

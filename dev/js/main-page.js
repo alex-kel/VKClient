@@ -40,7 +40,7 @@ function getQueryVariable(query, variable) {
     }
 }
 
-var auth = window.document.getElementByid('authButton');
+var auth = window.document.getElementById('authButton');
 auth.addEventListener( "click", function(){
     auth();
 } );

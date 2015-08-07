@@ -10,8 +10,33 @@ article{
 }
 
 $white: #FEFEFE;
-$light-grey: #D6D6D6;
-$dark-grey: #828283;
+$light-gray: #D6D6D6;
+$dark-gray: #828283;
 $black: #565857;
 $light-blue: #56B9EE;
 $dark-blue: #69B3D8;
+
+.left-menu{
+  padding: 1.5%;
+  width: 10%;
+  height: 100%;
+  max-width: 150px;
+  min-width: 80px;
+  position: fixed;
+  .left-menu-item{
+    color: $dark-gray;
+    padding: 1em 0;
+    text-align: center;
+    &:hover{
+      color: $white;
+      cursor: default;
+    }
+  }
+
+  background: -webkit-linear-gradient(90deg, #393b3c 10%, #505254 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #393b3c 10%, #505254 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #393b3c 10%, #505254 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #393b3c 10%, #505254 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #393b3c 10%, #505254 90%); /* W3C */
+
+}

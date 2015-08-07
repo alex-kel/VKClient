@@ -42,3 +42,7 @@ gulp.task('react', function () {
 gulp.task('build', ['sass', 'react'], function(){
 
 });
+
+gulp.task('watch', function(){
+    gulp.watch('./dev/css/**/*.scss', ['sass']);
+});

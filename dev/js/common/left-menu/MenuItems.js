@@ -5,7 +5,7 @@ function Item(name, displayName){
     return {
         name: name,
         displayName: displayName,
-        className: name + 'item'
+        className: 'list-menu-item-' + name
     }
 }
 

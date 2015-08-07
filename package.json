@@ -9,17 +9,19 @@
     "position": "center",
     "toolbar": true
   },
-  "scripts":{
+  "scripts": {
     "build": "gulp build",
     "dev": "nw .",
-    "start": "npm run build && npm run dev"
+    "start": "npm run build && npm run dev && gulp watch"
   },
   "dependencies": {
+    "classnames": "*",
+    "flux": "*",
     "react": "^0.13.3",
-    "classnames": "*"
+    "zepto-browserify": "^1.0.0"
   },
   "devDependencies": {
-    "glob":"*",
+    "glob": "*",
     "gulp-rename": "*",
     "gulp": "*",
     "vinyl-source-stream": "*",
