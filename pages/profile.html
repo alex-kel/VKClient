@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/profile-page.css" rel="stylesheet">
     <script src="../js/lib/jquery-2.1.4.min.js"></script>
-    <script src="../js/dev/profile-page.js"></script>
+    <script src="../js/lib/react.js"></script>
+    <script src="../js/lib/JSXTransformer.js"></script>
+
 </head>
 <body>
-    <p id="id"></p>
-    Hello! Your name is
-    <p id="name"></p>
-    and this is your photo
-    <img id="photo" />
-    <div class="results"></div>
+    <div class="row">
+        <div class="avatar col-md-2 col-md-offset-1">
+
+        </div>
+
+        <div class="information col-md-8">
+            <div id="about"></div>
+        </div>
+    </div>
+    <script src="../js/dev/profile-page.js" type="text/jsx"></script>
 </body>
 </html>

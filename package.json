@@ -1,16 +1,15 @@
 {
   "name": "VK_Client",
   "version": "0.0.1",
-  "main": "pages/index.html",
+  "main": "pages/auth.html",
   "author": "Alexander Kel",
   "window": {
     "width": 700,
     "height": 750,
     "position": "center",
-    "toolbar": false
+    "toolbar": true
   },
-  "devDependencies":{
-    "gulp": "*",
-    "gulp-browserify": "*"
+  "dependencies": {
+    "react": "^0.13.3"
   }
 }

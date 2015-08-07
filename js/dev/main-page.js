@@ -12,7 +12,7 @@ $(document).ready(function() {
 });
 
 var auth = function() {
-    var authWindow = gui.Window.open(auth_url, {"toolbar": false,
+    var authWindow = gui.Window.open(auth_settings.auth_url, {"toolbar": false,
                                                 "position": "center"});
     authWindow.on("loaded", function() {
         var url = this.window.location.href;
@@ -20,7 +20,7 @@ var auth = function() {
         var parameters = url.substr(sharpInd >= 0 ? sharpInd + 1 : 0);
         if (parameters.indexOf("access_token") >= 0) {
             token = getQueryVariable(parameters, "access_token");
-            user_id = getQueryVariable("user_id")
+            user_id = getQueryVariable("user_id");
             localStorage.removeItem("token");
             localStorage.removeItem("user_id");
             localStorage.setItem("user_id", user_id);
