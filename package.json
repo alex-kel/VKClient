@@ -1,7 +1,7 @@
 {
   "name": "VK_Client",
   "version": "0.0.1",
-  "main": "pages/auth.html",
+  "main": "pages/index.html",
   "author": "Alexander Kel",
   "window": {
     "width": 700,
