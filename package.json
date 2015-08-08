@@ -18,14 +18,15 @@
     "classnames": "*",
     "flux": "*",
     "react": "^0.13.3",
-    "zepto-browserify": "^1.0.0"
+    "zepto-browserify": "^1.0.0",
+    "react-router": "*"
   },
   "devDependencies": {
     "glob": "*",
     "gulp-rename": "*",
     "gulp": "*",
     "vinyl-source-stream": "*",
-    "gulp-browserify": "*",
+    "browserify": "*",
     "gulp-notify": "^2.2.0",
     "reactify": "*",
     "gulp-streamify": "*",
