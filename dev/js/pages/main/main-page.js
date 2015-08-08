@@ -4,15 +4,17 @@
 var token = localStorage.getItem("token");
 var user_id = localStorage.getItem("user_id");
 var gui = requireNode("nw.gui");
-var auth_settings = require('./../common/settings/settings');
+var auth_settings = require('./../../common/settings/settings');
 var React = require('react');
 var Navigation = require('react-router').Navigation;
+var localstorage = require('./../../common/localstorage');
+
 
 var Main = React.createClass({
     mixins: [Navigation],
     componentDidMount: function(){
         if (user_id !== null && token !== null) {
-            this.transitionTo('profile');
+            this.transitionTo('myProfile');
         }
     },
     auth: function(){
@@ -26,12 +28,11 @@ var Main = React.createClass({
             if (parameters.indexOf("access_token") >= 0) {
                 token = getQueryVariable(parameters, "access_token");
                 user_id = getQueryVariable("user_id");
-                localStorage.removeItem("token");
-                localStorage.removeItem("user_id");
-                localStorage.setItem("user_id", user_id);
-                localStorage.setItem("token", token);
+                localstorage.setUserId(user_id);
+                localstorage.setToken(token);
+
                 authWindow.close();
-                self.transitionTo('profile');
+                self.transitionTo('myProfile');
             }
         });
     },

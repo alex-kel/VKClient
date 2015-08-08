@@ -22,8 +22,9 @@ $light-blue: #56B9EE;
 $dark-blue: #69B3D8;
 
 .content{
-  position: absolute;
-  left: 100px;
+  padding-left: 100px;
+  width: 100%;
+
 }
 
 .left-menu{
@@ -50,3 +51,4 @@ $dark-blue: #69B3D8;
 }
 
 @import "auth-page";
+@import "profile";

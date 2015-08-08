@@ -1,0 +1,16 @@
+.profile-top-block{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  .profile-top-block-item{
+    flex-grow: 2;
+    align-self: center;
+    &:nth-child(2){
+      flex-grow: 3;
+    }
+    .profile-image img{
+      max-width: 100px;
+      margin: auto;
+    }
+  }
+}

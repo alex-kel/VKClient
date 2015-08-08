@@ -7,33 +7,22 @@ var Route = Router.Route;
 var DefaultRoute = Router.DefaultRoute;
 var React = require('react');
 
-var Main = require('./pages/main-page');
-var Profile = require('./pages/profile-page');
-var Menu = require('./common/left-menu/Menu');
 
+
+var Main = require('./pages/main/main-page');
+var Profile = require('./pages/profile/profile-page');
+var Photos = require('./pages/photo/photo-page');
+
+var localstorage = require('./common/localstorage');
 var RouteHandler = Router.RouteHandler;
 
 var App = React.createClass({
-    getToken: function(){
-        return localStorage.getItem('token');
-    },
     render () {
-        if (this.getToken()){
-            return (
-                <div>
-                    <Menu/>
-                    <div className="content">
-                        <RouteHandler/>
-                    </div>
-                </div>
-            )            
-        } else{
-            return (
-                <div>
-                    <RouteHandler/>
-                </div>
-            )
-        }
+        return (
+            <div>
+                <RouteHandler/>
+            </div>
+        )
 
     }
 });
@@ -42,7 +31,9 @@ var App = React.createClass({
 var routes = (
     <Route handler={App}>
         <DefaultRoute handler={Main}/>
-        <Route path="profile" name="profile" handler={Profile}/>
+        <Route path="/profile" name="myProfile" handler={Profile}/>
+        <Route path="/profile/:userId" name="profile" handler={Profile}/>
+        <Route path="/photos/:photoId" name="photo" handler={Photos}/>
     </Route>
 );
 

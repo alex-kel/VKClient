@@ -4,8 +4,10 @@
 var React = require('react');
 var classnames = require('classnames');
 var Store = require('../Store');
+var Router = require('react-router');
 
 var UserPhoto = React.createClass({
+    mixins: [Router.Navigation],
     getInitialState: function(){
         return{
             photo: ''
@@ -18,16 +20,24 @@ var UserPhoto = React.createClass({
         var self = this;
         Store.bind('authUserInfo', self.setPhoto);
     },
+    goToMyProfile: function(){
+        this.transitionTo("myProfile")
+    },
+    getImage: function(){
+        if (this.state.photo.length){
+            return (
+                <img src={this.state.photo} className="img-responsive img-circle"/>
+            )
+        } else{
+            return '';
+        }
+    },
     render: function(){
         var item = this.props.item;
         var classes = classnames('left-menu-item', 'list-menu-item-photo');
-        var img = '';
-        if (this.state.photo.length){
-            img = (<img src={this.state.photo} className="img-responsive img-circle"/>)
-        }
         return (
-            <div className={classes}>
-                {img}
+            <div className={classes} onClick={this.goToMyProfile}>
+                {this.getImage()}
             </div>
         )
     }
