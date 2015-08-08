@@ -24,7 +24,4 @@ var MenuApp = React.createClass({
     }
 });
 
-React.render(
-    <MenuApp/>,
-    document.body
-);
+module.exports = MenuApp;

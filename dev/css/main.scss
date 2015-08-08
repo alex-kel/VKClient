@@ -1,4 +1,9 @@
 @import "_bootstrap.scss";
+@font-face { font-family: Myriad Set Pro; src: url('./../fonts/MyriadSetPro/myriad-set-pro_text.ttf'); }
+@font-face { font-family: Myriad Set Pro; font-weight: bold; src: url('./../fonts/MyriadSetPro/myriad-set-pro_bold.ttf');}
+@font-face { font-family: Myriad Set Pro; font-weight: 100; src: url('./../fonts/MyriadSetPro/myriad-set-pro_ultralight.ttf');}
+@font-face { font-family: Myriad Set Pro; font-weight: 200; src: url('./../fonts/MyriadSetPro/myriad-set-pro_thin.ttf');}
+
 
 html, body{
   height: 100%;
@@ -16,12 +21,15 @@ $black: #565857;
 $light-blue: #56B9EE;
 $dark-blue: #69B3D8;
 
+.content{
+  position: absolute;
+  left: 100px;
+}
+
 .left-menu{
   padding: 1.5%;
-  width: 10%;
+  width: 100px;
   height: 100%;
-  max-width: 150px;
-  min-width: 80px;
   position: fixed;
   .left-menu-item{
     color: $dark-gray;
@@ -40,3 +48,5 @@ $dark-blue: #69B3D8;
   background:         linear-gradient(90deg, #393b3c 10%, #505254 90%); /* W3C */
 
 }
+
+@import "auth-page";

@@ -9,7 +9,7 @@ var glob = require('glob');
 var rename = require('gulp-rename');
 var flatten = require('gulp-flatten');
 gulp.task('sass', function () {
-    gulp.src('./dev/css/**/*.scss')
+    gulp.src('./dev/css/main.scss')
         .pipe(sass({
             style: 'compressed',
             loadPath: [
@@ -24,7 +24,7 @@ gulp.task('sass', function () {
 
 
 gulp.task('react', function () {
-    glob('./dev/js/*.js', function(err, files) {
+    glob('./dev/js/app.js', function(err, files) {
         if(err) done(err);
 
         files.map(function(entry) {
@@ -44,5 +44,5 @@ gulp.task('build', ['sass', 'react'], function(){
 });
 
 gulp.task('watch', function(){
-    gulp.watch('./dev/css/**/*.scss', ['sass']);
+    gulp.watch('./dev/css/main.scss', ['sass']);
 });
