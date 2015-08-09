@@ -1,20 +1,21 @@
 /**
  * Created by aydar on 07.08.15.
  */
-function Item(name, displayName){
+function Item(name, displayName, iconClass){
     return {
         name: name,
         displayName: displayName,
+        iconClass: iconClass,
         className: 'list-menu-item-' + name
     }
 }
 
 module.exports = [
-    Item('news', 'News'),
-    Item('feedback', 'Feedback'),
-    Item('messages', 'Messages'),
-    Item('friends', 'Friends'),
-    Item('communities', 'Communities'),
-    Item('photos', 'Photos'),
-    Item('settings', 'Settings')
+    Item('news', 'News', 'flaticon-message30'),
+    Item('feedback', 'Feedback', 'flaticon-speech-bubble34'),
+    Item('messages', 'Messages', 'flaticon-email141'),
+    Item('friends', 'Friends', 'flaticon-profile7'),
+    Item('communities', 'Communities', 'flaticon-socialnetwork156'),
+    Item('photos', 'Photos', 'flaticon-photo-camera5'),
+    Item('settings', 'Settings', 'flaticon-settings20')
 ];
