@@ -4,10 +4,12 @@
   "main": "pages/index.html",
   "author": "Alexander Kel",
   "window": {
-    "width": 700,
-    "height": 750,
+    "width": 600,
+    "height": 600,
     "position": "center",
-    "toolbar": true
+    "toolbar": true,
+    "min_width": 450,
+    "min_height": 450
   },
   "scripts": {
     "build": "gulp build",

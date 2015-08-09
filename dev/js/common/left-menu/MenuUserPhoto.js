@@ -26,7 +26,7 @@ var UserPhoto = React.createClass({
     getImage: function(){
         if (this.state.photo.length){
             return (
-                <img src={this.state.photo} className="img-responsive img-circle"/>
+                <img src={this.state.photo} className="img-responsive"/>
             )
         } else{
             return '';

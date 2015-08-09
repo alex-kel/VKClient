@@ -19,7 +19,7 @@ var RouteHandler = Router.RouteHandler;
 var App = React.createClass({
     render () {
         return (
-            <div>
+            <div className="full-height">
                 <RouteHandler/>
             </div>
         )

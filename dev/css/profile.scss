@@ -1,16 +1,86 @@
-.profile-top-block{
+.profile-block{
   display: flex;
-  justify-content: center;
-  align-content: center;
-  .profile-top-block-item{
+  justify-content: flex-start;
+  align-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+
+  .profile-info{
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .profile-photo img{
+    margin: auto;
+  }
+
+  .profile-info-item{
+    padding: 0.5em;
+
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .profile-info-item:nth-child(2){
     flex-grow: 2;
-    align-self: center;
-    &:nth-child(2){
-      flex-grow: 3;
+  }
+
+  .profile-info-name{
+    margin-top: 10px;
+  }
+
+  .profile-info-main{
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: white;
+    color: #545454;
+  }
+
+  .profile-btn-group{
+    padding: 0 0.5em;
+    .btn:not(:last-child){
+      margin-right: 2em;
     }
-    .profile-image img{
-      max-width: 100px;
-      margin: auto;
-    }
+  }
+
+  .profile-info-counters{
+    background-color: #4693C6;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .card{
+    padding: 0.1em 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-grow: 1;
+    border-right: 1px solid #545454;
+  }
+
+  .card:last-child{
+    border-right: none;
+  }
+
+  .card-item{
+    flex-grow: 1;
   }
 }

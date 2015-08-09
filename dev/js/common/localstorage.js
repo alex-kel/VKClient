@@ -14,8 +14,8 @@ module.exports.setToken = function(token){
     localStorage.setItem(NAMES.TOKEN, token);
 };
 
-module.exports.getUser = function(){
-    localStorage.getItem(NAMES.USER_ID)
+module.exports.getUserId = function(){
+    return localStorage.getItem(NAMES.USER_ID)
 };
 
 module.exports.setUserId = function(userId){

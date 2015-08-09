@@ -17,7 +17,6 @@ var MenuApp = React.createClass({
         });
         return (
             <div className="left-menu">
-                <UserPhoto/>
                 {items}
             </div>
         )

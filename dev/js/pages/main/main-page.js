@@ -27,10 +27,9 @@ var Main = React.createClass({
             var parameters = url.substr(sharpInd >= 0 ? sharpInd + 1 : 0);
             if (parameters.indexOf("access_token") >= 0) {
                 token = getQueryVariable(parameters, "access_token");
-                user_id = getQueryVariable("user_id");
+                user_id = getQueryVariable(parameters, "user_id");
                 localstorage.setUserId(user_id);
                 localstorage.setToken(token);
-
                 authWindow.close();
                 self.transitionTo('myProfile');
             }

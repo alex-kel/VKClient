@@ -3,13 +3,12 @@
  */
 var events = require('./lib/microEvents');
 var UserApi = require('./vk-api/UserApi');
-
+var localstorage = require('./localstorage');
 var Store = {
     authUserInfo: {},
-
     loadUserInfo: function(){
-        UserApi.loadUser(null, function (data) {
-            Store.authUserInfo = data.response[0];
+        UserApi.loadUser(localstorage.getUserId(), function (data) {
+            Store.authUserInfo = data;
             Store.trigger("authUserInfo");
         });
     }
