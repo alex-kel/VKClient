@@ -6,12 +6,17 @@ var classnames = require('classnames');
 var MenuItem = React.createClass({
     render: function(){
         var item = this.props.item;
-        var classes = classnames('left-menu-item', item.className);
+        var classes = classnames('main-menu-item', item.className);
         var iconClasses = classnames('icon', item.iconClass);
         return (
             <div className={classes}>
-                <i className={iconClasses}></i>
-                {item.displayName}
+                <div>
+                    <i className={iconClasses}></i>
+                    <div className="main-menu-item-text">
+                        {item.displayName}
+                    </div>
+                </div>
+
             </div>
         )
     }

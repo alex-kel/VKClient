@@ -1,7 +1,7 @@
 /**
  * Created by aydar on 07.08.15.
  */
-var Menu = require('./../../common/left-menu/Menu');
+var Menu = require('./../../common/main-menu/Menu');
 var React = require('react');
 var UserApi = require('./../../common/vk-api/UserApi');
 var ProfileInfo = require('./info/info');

@@ -16,7 +16,7 @@ var MenuApp = React.createClass({
             )
         });
         return (
-            <div className="left-menu">
+            <div className="main-menu">
                 {items}
             </div>
         )
