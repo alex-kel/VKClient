@@ -5,6 +5,43 @@
 @font-face { font-family: Myriad Set Pro; font-weight: 100; src: url('./../fonts/MyriadSetPro/myriad-set-pro_ultralight.ttf');}
 @font-face { font-family: Myriad Set Pro; font-weight: 200; src: url('./../fonts/MyriadSetPro/myriad-set-pro_thin.ttf');}
 
+@font-face {
+  font-family: "Flaticon";
+  src: url("../../dev/fonts/flaticons/flaticon.eot");
+  src: url("../../dev/fonts/flaticons/flaticon.eot#iefix") format("embedded-opentype"),
+  url("../../dev/fonts/flaticons/flaticon.woff") format("woff"),
+  url("../../dev/fonts/flaticons/flaticon.ttf") format("truetype"),
+  url("../../dev/fonts/flaticons/flaticon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-size: 20px;
+  font-style: normal;
+  margin-left: 20px;
+}.flaticon-email141:before {
+   content: "\e000";
+ }
+.flaticon-message30:before {
+  content: "\e001";
+}
+.flaticon-photo-camera5:before {
+  content: "\e002";
+}
+.flaticon-profile7:before {
+  content: "\e003";
+}
+.flaticon-settings20:before {
+  content: "\e004";
+}
+.flaticon-socialnetwork156:before {
+  content: "\e005";
+}
+.flaticon-speech-bubble34:before {
+  content: "\e006";
+}
 
 html, body{
   height: 100%;
@@ -45,16 +82,18 @@ $dark-blue: #69B3D8;
 .left-menu{
   padding: 1.5%;
   width: 100px;
-  border-right: 1px solid darkgray;
   height: 100%;
   position: fixed;
   .left-menu-item{
     color: $dark-gray;
     padding: 1em 0;
-    text-align: center;
+    text-align: left;
     &:hover{
       color: $white;
       cursor: default;
+    }
+    .icon {
+     padding-right: 10px;
     }
   }
 

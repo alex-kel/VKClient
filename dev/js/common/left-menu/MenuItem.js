@@ -7,8 +7,10 @@ var MenuItem = React.createClass({
     render: function(){
         var item = this.props.item;
         var classes = classnames('left-menu-item', item.className);
+        var iconClasses = classnames('icon', item.iconClass);
         return (
             <div className={classes}>
+                <i className={iconClasses}></i>
                 {item.displayName}
             </div>
         )
