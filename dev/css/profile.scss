@@ -47,12 +47,28 @@
     color: #545454;
   }
 
-  .profile-btn-group{
-    padding: 0 0.5em;
-    .btn:not(:last-child){
-      margin-right: 2em;
+  @media (min-width: 600px) {
+    .profile-btn-group{
+      padding: 0 0.5em;
+      .btn:not(:last-child){
+        margin-right: 2em;
+      }
     }
   }
+
+  @media (max-width: 600px) {
+    .profile-btn-group{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .btn:not(:last-child){
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+
+
 
   .profile-info-counters{
     background-color: #4693C6;

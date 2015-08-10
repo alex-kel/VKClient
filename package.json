@@ -14,7 +14,8 @@
   "scripts": {
     "build": "gulp build",
     "dev": "nw .",
-    "start": "npm run build && npm run dev && gulp watch"
+    "start": "npm run build && npm run dev",
+    "watch": "gulp react sass && gulp watch"
   },
   "dependencies": {
     "classnames": "*",
